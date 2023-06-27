@@ -55,10 +55,12 @@ let count = 0
 function increment() {
     console.log("clicked")
     count=count+1
-    document.getElementById("count").innerText = count ;
+    document.getElementById("count").textContent= count ;
 }
  let saveEL = document.getElementById("save-el")
 function save() {
-    let countStr = count + " - "
-    saveEl.textContent += countStr
+    let countStr = count + " - ";
+    saveEL.textContent += countStr;
+    document.getElementById("count").textContent = 0;
+    count = 0;
 }
